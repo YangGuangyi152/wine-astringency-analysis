@@ -1,0 +1,13 @@
+sensory_indicator,raw_cluster_id,empirical_module,mechanism_superclass,module_order
+Im,4,Peak/load core,Bulk aggregation / peak intensity,1
+TI/AUC,4,Peak/load core,Bulk aggregation / peak intensity,1
+Late fraction AUC,2,Late/film,Interface film / temporal transformation,4
+I60,2,Late/film,Interface film / temporal transformation,4
+I90,3,Persistence bridge,Interface film / temporal transformation,3
+Post peak half life,2,Late/film,Interface film / temporal transformation,4
+Duration above 5,3,Persistence bridge,Interface film / temporal transformation,3
+Rough,1,Coarse/pucker,Bulk aggregation / peak intensity,2
+Pucker,1,Coarse/pucker,Bulk aggregation / peak intensity,2
+Dry,2,Late/film,Interface film / temporal transformation,4
+Grippy,2,Late/film,Interface film / temporal transformation,4
+Mouthcoating,2,Late/film,Interface film / temporal transformation,4

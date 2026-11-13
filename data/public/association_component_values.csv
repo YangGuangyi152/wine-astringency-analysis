@@ -1,0 +1,151 @@
+selection_order,source,role,display_label,component_column,component,value
+1,Structure,experimental,mDP,struct_mDP,F1,1.8443178725880964
+1,Structure,experimental,mDP,struct_mDP,F2,3.1290583065672894
+1,Structure,experimental,mDP,struct_mDP,F3,4.148069086114064
+1,Structure,experimental,mDP,struct_mDP,F4,5.450416505659125
+1,Structure,experimental,mDP,struct_mDP,F5,7.247571563377025
+1,Structure,experimental,mDP,struct_mDP,F6,10.801450093773894
+2,Structure,experimental,extension%,struct_extension_pct,F1,45.77833707261396
+2,Structure,experimental,extension%,struct_extension_pct,F2,68.03806853087632
+2,Structure,experimental,extension%,struct_extension_pct,F3,75.8881753889865
+2,Structure,experimental,extension%,struct_extension_pct,F4,81.6526152760912
+2,Structure,experimental,extension%,struct_extension_pct,F5,86.20216851703292
+2,Structure,experimental,extension%,struct_extension_pct,F6,90.74196575737172
+3,Structure,experimental,PD%,struct_PD_pct,F1,10.865752293240991
+3,Structure,experimental,PD%,struct_PD_pct,F2,17.423031650081807
+3,Structure,experimental,PD%,struct_PD_pct,F3,19.36132644246979
+3,Structure,experimental,PD%,struct_PD_pct,F4,18.86433876692749
+3,Structure,experimental,PD%,struct_PD_pct,F5,19.80972882806464
+3,Structure,experimental,PD%,struct_PD_pct,F6,21.326643028939127
+4,Bulk,experimental,A600,bulk_A600_minus_BSM,F1,0.144
+4,Bulk,experimental,A600,bulk_A600_minus_BSM,F2,0.3653333333333333
+4,Bulk,experimental,A600,bulk_A600_minus_BSM,F3,0.4703333333333332
+4,Bulk,experimental,A600,bulk_A600_minus_BSM,F4,0.4976666666666666
+4,Bulk,experimental,A600,bulk_A600_minus_BSM,F5,0.5566666666666666
+4,Bulk,experimental,A600,bulk_A600_minus_BSM,F6,0.5806666666666666
+5,Bulk,experimental,DLS eff_diam.,bulk_DLS_eff_diam_5min,F1,373.1942333333334
+5,Bulk,experimental,DLS eff_diam.,bulk_DLS_eff_diam_5min,F2,413.2691333333333
+5,Bulk,experimental,DLS eff_diam.,bulk_DLS_eff_diam_5min,F3,452.5999
+5,Bulk,experimental,DLS eff_diam.,bulk_DLS_eff_diam_5min,F4,649.7725666666666
+5,Bulk,experimental,DLS eff_diam.,bulk_DLS_eff_diam_5min,F5,971.9843666666666
+5,Bulk,experimental,DLS eff_diam.,bulk_DLS_eff_diam_5min,F6,2738.812
+6,Bulk,experimental,DLS D90,bulk_DLS_D90_5min,F1,698.1826333333333
+6,Bulk,experimental,DLS D90,bulk_DLS_D90_5min,F2,750.0898666666667
+6,Bulk,experimental,DLS D90,bulk_DLS_D90_5min,F3,812.0363666666666
+6,Bulk,experimental,DLS D90,bulk_DLS_D90_5min,F4,1190.7673333333332
+6,Bulk,experimental,DLS D90,bulk_DLS_D90_5min,F5,1602.459
+6,Bulk,experimental,DLS D90,bulk_DLS_D90_5min,F6,5087.895666666666
+7,QCM-D,experimental,-Δf,qcmd_new_s2_minus_df_Hz,F1,103.64177692244502
+7,QCM-D,experimental,-Δf,qcmd_new_s2_minus_df_Hz,F2,40.255112033892374
+7,QCM-D,experimental,-Δf,qcmd_new_s2_minus_df_Hz,F3,66.15307460024992
+7,QCM-D,experimental,-Δf,qcmd_new_s2_minus_df_Hz,F4,84.90164655088162
+7,QCM-D,experimental,-Δf,qcmd_new_s2_minus_df_Hz,F5,169.1760006408689
+7,QCM-D,experimental,-Δf,qcmd_new_s2_minus_df_Hz,F6,133.80516998693903
+8,QCM-D,experimental,ΔD,qcmd_new_s2_delta_D_ppm,F1,28.96255696348472
+8,QCM-D,experimental,ΔD,qcmd_new_s2_delta_D_ppm,F2,16.59989288512977
+8,QCM-D,experimental,ΔD,qcmd_new_s2_delta_D_ppm,F3,33.117768505072206
+8,QCM-D,experimental,ΔD,qcmd_new_s2_delta_D_ppm,F4,45.72861293133222
+8,QCM-D,experimental,ΔD,qcmd_new_s2_delta_D_ppm,F5,102.74398992794752
+8,QCM-D,experimental,ΔD,qcmd_new_s2_delta_D_ppm,F6,99.607773622341
+9,QCM-D,experimental,ΔD/(-Δf),qcmd_new_s2_D_over_minus_f,F1,0.279448672374243
+9,QCM-D,experimental,ΔD/(-Δf),qcmd_new_s2_D_over_minus_f,F2,0.4123673254505828
+9,QCM-D,experimental,ΔD/(-Δf),qcmd_new_s2_D_over_minus_f,F3,0.5006232696695716
+9,QCM-D,experimental,ΔD/(-Δf),qcmd_new_s2_D_over_minus_f,F4,0.5386069032704451
+9,QCM-D,experimental,ΔD/(-Δf),qcmd_new_s2_D_over_minus_f,F5,0.6073201254240256
+9,QCM-D,experimental,ΔD/(-Δf),qcmd_new_s2_D_over_minus_f,F6,0.7444239533649103
+10,QCM-D,experimental,S3a Δf Recovery,qcmd_new_s3a_frequency_recovery_pct,F1,23.19675024229507
+10,QCM-D,experimental,S3a Δf Recovery,qcmd_new_s3a_frequency_recovery_pct,F2,16.42417243146966
+10,QCM-D,experimental,S3a Δf Recovery,qcmd_new_s3a_frequency_recovery_pct,F3,14.621429103679
+10,QCM-D,experimental,S3a Δf Recovery,qcmd_new_s3a_frequency_recovery_pct,F4,14.38800261800106
+10,QCM-D,experimental,S3a Δf Recovery,qcmd_new_s3a_frequency_recovery_pct,F5,7.263857502975782
+10,QCM-D,experimental,S3a Δf Recovery,qcmd_new_s3a_frequency_recovery_pct,F6,13.25362565982504
+11,QCM-D,experimental,S3a  ΔD Recovery,qcmd_new_s3a_D_recovery_pct,F1,15.019076133849603
+11,QCM-D,experimental,S3a  ΔD Recovery,qcmd_new_s3a_D_recovery_pct,F2,10.991697399823089
+11,QCM-D,experimental,S3a  ΔD Recovery,qcmd_new_s3a_D_recovery_pct,F3,13.958791027323263
+11,QCM-D,experimental,S3a  ΔD Recovery,qcmd_new_s3a_D_recovery_pct,F4,12.373852363024666
+11,QCM-D,experimental,S3a  ΔD Recovery,qcmd_new_s3a_D_recovery_pct,F5,10.580337496975988
+11,QCM-D,experimental,S3a  ΔD Recovery,qcmd_new_s3a_D_recovery_pct,F6,11.947007845269187
+12,QCM-D,experimental,S3b  Δf Recovery,qcmd_new_s3b_frequency_recovery_pct,F1,94.30004630241554
+12,QCM-D,experimental,S3b  Δf Recovery,qcmd_new_s3b_frequency_recovery_pct,F2,91.45968754679154
+12,QCM-D,experimental,S3b  Δf Recovery,qcmd_new_s3b_frequency_recovery_pct,F3,82.30747661546528
+12,QCM-D,experimental,S3b  Δf Recovery,qcmd_new_s3b_frequency_recovery_pct,F4,74.50337514223304
+12,QCM-D,experimental,S3b  Δf Recovery,qcmd_new_s3b_frequency_recovery_pct,F5,50.93853174929233
+12,QCM-D,experimental,S3b  Δf Recovery,qcmd_new_s3b_frequency_recovery_pct,F6,71.90706860522032
+13,QCM-D,experimental,S3b  ΔD Recovery,qcmd_new_s3b_D_recovery_pct,F1,97.50100923555767
+13,QCM-D,experimental,S3b  ΔD Recovery,qcmd_new_s3b_D_recovery_pct,F2,89.20125215553365
+13,QCM-D,experimental,S3b  ΔD Recovery,qcmd_new_s3b_D_recovery_pct,F3,87.61162602217324
+13,QCM-D,experimental,S3b  ΔD Recovery,qcmd_new_s3b_D_recovery_pct,F4,76.40492832584961
+13,QCM-D,experimental,S3b  ΔD Recovery,qcmd_new_s3b_D_recovery_pct,F5,48.09027699450088
+13,QCM-D,experimental,S3b  ΔD Recovery,qcmd_new_s3b_D_recovery_pct,F6,73.732616817231
+14,Sensory,sensory,Im,sens_Im_smooth,F1,2.300181951082783
+14,Sensory,sensory,Im,sens_Im_smooth,F2,3.6800589215660833
+14,Sensory,sensory,Im,sens_Im_smooth,F3,4.829843645130372
+14,Sensory,sensory,Im,sens_Im_smooth,F4,5.76251990314536
+14,Sensory,sensory,Im,sens_Im_smooth,F5,8.180554451867614
+14,Sensory,sensory,Im,sens_Im_smooth,F6,9.360052105801014
+15,Sensory,sensory,TI/AUC,sens_TI_AUC_smooth,F1,71.07745276567313
+15,Sensory,sensory,TI/AUC,sens_TI_AUC_smooth,F2,132.3125696729699
+15,Sensory,sensory,TI/AUC,sens_TI_AUC_smooth,F3,193.76193760915675
+15,Sensory,sensory,TI/AUC,sens_TI_AUC_smooth,F4,243.6528110222341
+15,Sensory,sensory,TI/AUC,sens_TI_AUC_smooth,F5,431.4910538769149
+15,Sensory,sensory,TI/AUC,sens_TI_AUC_smooth,F6,469.5947229704843
+16,Sensory,sensory,Late fraction AUC,sens_late_AUC_fraction_60_120,F1,0.0171460377299835
+16,Sensory,sensory,Late fraction AUC,sens_late_AUC_fraction_60_120,F2,0.0447010932721008
+16,Sensory,sensory,Late fraction AUC,sens_late_AUC_fraction_60_120,F3,0.0996066629181519
+16,Sensory,sensory,Late fraction AUC,sens_late_AUC_fraction_60_120,F4,0.1090011292636571
+16,Sensory,sensory,Late fraction AUC,sens_late_AUC_fraction_60_120,F5,0.217644495997372
+16,Sensory,sensory,Late fraction AUC,sens_late_AUC_fraction_60_120,F6,0.1865275756955335
+17,Sensory,sensory,I60,sens_I60,F1,0.173641945287208
+17,Sensory,sensory,I60,sens_I60,F2,0.6784513103886984
+17,Sensory,sensory,I60,sens_I60,F3,1.2636460647764656
+17,Sensory,sensory,I60,sens_I60,F4,1.7379075624192986
+17,Sensory,sensory,I60,sens_I60,F5,4.076223402421836
+17,Sensory,sensory,I60,sens_I60,F6,3.668500284493612
+18,Sensory,sensory,I90,sens_I90,F1,0.0076688009188959
+18,Sensory,sensory,I90,sens_I90,F2,0.0391426426786958
+18,Sensory,sensory,I90,sens_I90,F3,0.2142438288500335
+18,Sensory,sensory,I90,sens_I90,F4,0.3645212051582955
+18,Sensory,sensory,I90,sens_I90,F5,1.342908601956214
+18,Sensory,sensory,I90,sens_I90,F6,1.4575249824203085
+19,Sensory,sensory,Post peak half life,sens_half_life_after_peak_s,F1,18.83076923076923
+19,Sensory,sensory,Post peak half life,sens_half_life_after_peak_s,F2,24.507692307692313
+19,Sensory,sensory,Post peak half life,sens_half_life_after_peak_s,F3,25.553846153846152
+19,Sensory,sensory,Post peak half life,sens_half_life_after_peak_s,F4,28.18461538461539
+19,Sensory,sensory,Post peak half life,sens_half_life_after_peak_s,F5,37.907692307692315
+19,Sensory,sensory,Post peak half life,sens_half_life_after_peak_s,F6,33.784615384615385
+20,Sensory,sensory,Duration above 5,sens_duration_above_5_s,F1,0.0
+20,Sensory,sensory,Duration above 5,sens_duration_above_5_s,F2,0.0
+20,Sensory,sensory,Duration above 5,sens_duration_above_5_s,F3,3.5846153846154354
+20,Sensory,sensory,Duration above 5,sens_duration_above_5_s,F4,15.938461538461764
+20,Sensory,sensory,Duration above 5,sens_duration_above_5_s,F5,40.86153846153904
+20,Sensory,sensory,Duration above 5,sens_duration_above_5_s,F6,45.07692307692371
+22,Sensory,sensory,Rough,sens_rough_level,F1,1.3076923076923077
+22,Sensory,sensory,Rough,sens_rough_level,F2,3.3076923076923075
+22,Sensory,sensory,Rough,sens_rough_level,F3,2.923076923076923
+22,Sensory,sensory,Rough,sens_rough_level,F4,3.1538461538461537
+22,Sensory,sensory,Rough,sens_rough_level,F5,4.076923076923077
+22,Sensory,sensory,Rough,sens_rough_level,F6,5.0
+23,Sensory,sensory,Pucker,sens_shrink_level,F1,1.0769230769230769
+23,Sensory,sensory,Pucker,sens_shrink_level,F2,3.0
+23,Sensory,sensory,Pucker,sens_shrink_level,F3,3.076923076923077
+23,Sensory,sensory,Pucker,sens_shrink_level,F4,3.769230769230769
+23,Sensory,sensory,Pucker,sens_shrink_level,F5,4.769230769230769
+23,Sensory,sensory,Pucker,sens_shrink_level,F6,4.923076923076923
+24,Sensory,sensory,Dry,sens_dry_level,F1,1.6153846153846154
+24,Sensory,sensory,Dry,sens_dry_level,F2,2.5384615384615383
+24,Sensory,sensory,Dry,sens_dry_level,F3,2.3846153846153846
+24,Sensory,sensory,Dry,sens_dry_level,F4,2.923076923076923
+24,Sensory,sensory,Dry,sens_dry_level,F5,4.769230769230769
+24,Sensory,sensory,Dry,sens_dry_level,F6,4.384615384615385
+25,Sensory,sensory,Grippy,sens_gripping_level,F1,1.1538461538461535
+25,Sensory,sensory,Grippy,sens_gripping_level,F2,2.076923076923077
+25,Sensory,sensory,Grippy,sens_gripping_level,F3,2.0
+25,Sensory,sensory,Grippy,sens_gripping_level,F4,2.3846153846153846
+25,Sensory,sensory,Grippy,sens_gripping_level,F5,4.615384615384615
+25,Sensory,sensory,Grippy,sens_gripping_level,F6,4.153846153846154
+26,Sensory,sensory,Mouthcoating,sens_coating_level,F1,1.1538461538461535
+26,Sensory,sensory,Mouthcoating,sens_coating_level,F2,1.7692307692307692
+26,Sensory,sensory,Mouthcoating,sens_coating_level,F3,2.0
+26,Sensory,sensory,Mouthcoating,sens_coating_level,F4,2.4615384615384617
+26,Sensory,sensory,Mouthcoating,sens_coating_level,F5,4.615384615384615
+26,Sensory,sensory,Mouthcoating,sens_coating_level,F6,3.769230769230769

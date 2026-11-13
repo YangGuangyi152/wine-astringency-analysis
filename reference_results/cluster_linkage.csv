@@ -1,0 +1,12 @@
+merge_step,left_node,right_node,distance,n_members,leaf_labels
+1,4.0,6.0,0.0014735428287769858,2.0,Im;TI/AUC;Late fraction AUC;I60;I90;Post peak half life;Duration above 5;Rough;Pucker;Dry;Grippy;Mouthcoating
+2,9.0,10.0,0.007110102871326518,2.0,Im;TI/AUC;Late fraction AUC;I60;I90;Post peak half life;Duration above 5;Rough;Pucker;Dry;Grippy;Mouthcoating
+3,11.0,13.0,0.04213300872013498,3.0,Im;TI/AUC;Late fraction AUC;I60;I90;Post peak half life;Duration above 5;Rough;Pucker;Dry;Grippy;Mouthcoating
+4,0.0,1.0,0.050358529694621956,2.0,Im;TI/AUC;Late fraction AUC;I60;I90;Post peak half life;Duration above 5;Rough;Pucker;Dry;Grippy;Mouthcoating
+5,2.0,3.0,0.051520108944906995,2.0,Im;TI/AUC;Late fraction AUC;I60;I90;Post peak half life;Duration above 5;Rough;Pucker;Dry;Grippy;Mouthcoating
+6,14.0,16.0,0.06607724090154138,5.0,Im;TI/AUC;Late fraction AUC;I60;I90;Post peak half life;Duration above 5;Rough;Pucker;Dry;Grippy;Mouthcoating
+7,5.0,17.0,0.11059821393754007,6.0,Im;TI/AUC;Late fraction AUC;I60;I90;Post peak half life;Duration above 5;Rough;Pucker;Dry;Grippy;Mouthcoating
+8,7.0,8.0,0.1843540601273529,2.0,Im;TI/AUC;Late fraction AUC;I60;I90;Post peak half life;Duration above 5;Rough;Pucker;Dry;Grippy;Mouthcoating
+9,12.0,15.0,0.24237960320070484,4.0,Im;TI/AUC;Late fraction AUC;I60;I90;Post peak half life;Duration above 5;Rough;Pucker;Dry;Grippy;Mouthcoating
+10,18.0,20.0,0.4318600274302075,10.0,Im;TI/AUC;Late fraction AUC;I60;I90;Post peak half life;Duration above 5;Rough;Pucker;Dry;Grippy;Mouthcoating
+11,19.0,21.0,0.7355200279389251,12.0,Im;TI/AUC;Late fraction AUC;I60;I90;Post peak half life;Duration above 5;Rough;Pucker;Dry;Grippy;Mouthcoating

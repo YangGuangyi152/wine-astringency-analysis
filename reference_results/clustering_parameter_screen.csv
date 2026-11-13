@@ -1,0 +1,5 @@
+data_basis,distance,linkage,k,silhouette
+mechanism_fingerprint_rv_coefficient,correlation-derived or dependence-derived; see method,average,4,0.7897056724247702
+mechanism_fingerprint_rv_coefficient,correlation-derived or dependence-derived; see method,average,3,0.7102701683055721
+mechanism_fingerprint_rv_coefficient,correlation-derived or dependence-derived; see method,average,5,0.6792150883278146
+mechanism_fingerprint_rv_coefficient,correlation-derived or dependence-derived; see method,average,2,0.6011811145631851
