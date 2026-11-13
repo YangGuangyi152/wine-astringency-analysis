@@ -138,7 +138,7 @@ def main():
         )
     )
     variance = pd.read_csv(out / "fpca_variance.csv")
-    assert [f"{x*100:.1f}" for x in variance.explained_variance_ratio] == [
+    assert [f"{x * 100:.1f}" for x in variance.explained_variance_ratio] == [
         "81.1",
         "14.9",
     ]
@@ -156,12 +156,13 @@ def main():
             args.restricted_output_dir
             or args.restricted_dir.resolve().parent / "results"
         )
-        check(
-            "Reported individual sensory endpoints",
-            args.restricted_dir / "sensory/participant_metrics_reference.csv",
-            private / "participant_metrics.csv",
-            ["user_id", "component"],
-        )
+        if (args.restricted_dir / "sensory/participant_metrics_reference.csv").exists():
+            check(
+                "Reported individual sensory endpoints",
+                args.restricted_dir / "sensory/participant_metrics_reference.csv",
+                private / "participant_metrics.csv",
+                ["user_id", "component"],
+            )
         check(
             "Reported paired sensory comparisons",
             ref / "sensory_pairwise_reference.csv",
@@ -180,12 +181,13 @@ def main():
             ("fpca_centroids_and_ellipses.csv", ["component"]),
         ]:
             check("Individual-data " + name, ref / name, private / name, keys)
-        check(
-            "Individual fPC scores",
-            args.restricted_dir / "sensory/fpca_scores_reference.csv",
-            private / "fpca_individual_scores.csv",
-            ["assessor_id", "component"],
-        )
+        if (args.restricted_dir / "sensory/fpca_scores_reference.csv").exists():
+            check(
+                "Individual fPC scores",
+                args.restricted_dir / "sensory/fpca_scores_reference.csv",
+                private / "fpca_individual_scores.csv",
+                ["assessor_id", "component"],
+            )
         check(
             "Five cited fPC1 correlations",
             ref / "score_metric_spearman_reference.csv",
@@ -211,26 +213,31 @@ def main():
             )
         )
         for system in ["BSM", "saliva"]:
+            if (args.restricted_dir / f"qcmd/{system}/recovery.csv").exists():
+                check(
+                    system + " per-experiment recovery input",
+                    args.restricted_dir / f"qcmd/{system}/recovery.csv",
+                    private / f"{system}_recovery.csv",
+                    ["run", "component", "metric", "stage"],
+                    ["recovery_percent"],
+                )
+        if (private / "qcmd_recovery_summary_from_private.csv").exists():
             check(
-                system + " per-experiment recovery input",
-                args.restricted_dir / f"qcmd/{system}/recovery.csv",
-                private / f"{system}_recovery.csv",
-                ["run", "component", "metric", "stage"],
-                ["recovery_percent"],
+                "Recovery summaries from three independent experiments",
+                args.data_dir / "qcmd_recovery_summary.csv",
+                private / "qcmd_recovery_summary_from_private.csv",
+                ["film_system", "component", "metric", "stage"],
             )
-        check(
-            "Recovery summaries from three independent experiments",
-            args.data_dir / "qcmd_recovery_summary.csv",
-            private / "qcmd_recovery_summary_from_private.csv",
-            ["film_system", "component", "metric", "stage"],
-        )
-        check(
-            "Saliva stage means from traces",
-            args.restricted_dir / "qcmd/saliva/stage_means.csv",
-            private / "saliva_stage_means_from_traces.csv",
-            ["run", "component", "metric", "stage"],
-            ["mean"],
-        )
+        if (args.restricted_dir / "qcmd/saliva/stage_means.csv").exists() and (
+            private / "saliva_stage_means_from_traces.csv"
+        ).exists():
+            check(
+                "Saliva stage means from traces",
+                args.restricted_dir / "qcmd/saliva/stage_means.csv",
+                private / "saliva_stage_means_from_traces.csv",
+                ["run", "component", "metric", "stage"],
+                ["mean"],
+            )
     pd.DataFrame(checks).to_csv(out / "verification_report.csv", index=False)
     (out / "verification_report.json").write_text(json.dumps(checks, indent=2))
     print(f"PASS: {len(checks)} numerical verification checks.")

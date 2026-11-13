@@ -3,7 +3,7 @@
 A copy of the release source and inputs was executed in a separate directory. Individual sensory and QCM-D inputs were stored outside the public repository. No calculation input was read from an original project path.
 
 - Public workflow: **18 numerical checks passed**.
-- Full confidential workflow: **33 numerical checks passed**.
+- Raw-record confidential workflow: **27 numerical checks passed**.
 - The retained 14 sensory endpoints yield 210 paired comparisons; their Holm-adjusted P values reproduce the archived values.
 - fPC1/fPC2 variance proportions reproduce 81.1% and 14.9%.
 - All 156 RV coefficients, exact permutation P values and BH q values reproduce the reported analysis; each test enumerates 720 permutations.

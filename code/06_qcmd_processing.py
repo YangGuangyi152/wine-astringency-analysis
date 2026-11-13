@@ -9,14 +9,15 @@ def main():
     summaries = []
     for system in ["BSM", "saliva"]:
         folder = args.restricted_dir / "qcmd" / system
-        recovery = pd.read_csv(folder / "recovery.csv").assign(film_system=system)
-        recovery.to_csv(args.output_dir / f"{system}_recovery.csv", index=False)
-        summaries.append(
-            recovery.groupby(["film_system", "component", "metric", "stage"])
-            .recovery_percent.agg(["mean", "std", "count"])
-            .reset_index()
-        )
-        if system == "saliva":
+        if (folder / "recovery.csv").exists():
+            recovery = pd.read_csv(folder / "recovery.csv").assign(film_system=system)
+            recovery.to_csv(args.output_dir / f"{system}_recovery.csv", index=False)
+            summaries.append(
+                recovery.groupby(["film_system", "component", "metric", "stage"])
+                .recovery_percent.agg(["mean", "std", "count"])
+                .reset_index()
+            )
+        if system == "saliva" and (folder / "stage_windows.csv").exists():
             windows = pd.read_csv(folder / "stage_windows.csv")
             rows = []
             for w in windows.itertuples():
@@ -41,9 +42,10 @@ def main():
             pd.DataFrame(rows).to_csv(
                 args.output_dir / "saliva_stage_means_from_traces.csv", index=False
             )
-    pd.concat(summaries, ignore_index=True).to_csv(
-        args.output_dir / "qcmd_recovery_summary_from_private.csv", index=False
-    )
+    if summaries:
+        pd.concat(summaries, ignore_index=True).to_csv(
+            args.output_dir / "qcmd_recovery_summary_from_private.csv", index=False
+        )
 
 
 if __name__ == "__main__":

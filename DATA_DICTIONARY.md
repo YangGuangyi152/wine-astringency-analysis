@@ -28,9 +28,9 @@ The archived association vectors and the triplicate recovery summaries are docum
 
 `sensory/records.jsonl` contains 78 unique assessor–fraction records (13× 6). Fields are `assessor_id`, `component`, `time_s`, `intensity`, `ratings`. Assessors are P01–P13. Rating keys map `dry`→drying, `rough`→rough, `shrink`→pucker, `gripping`→grippy, `coating`→mouthcoating; categories 1–5. The reference blank is not assigned a score of 1.
 
-The restricted reference endpoint table and fPC score table are numerical verification targets, not additional observations.
+The confidential submission contains source records only. Numerical validation uses the public reference tables and aggregate moments.
 
-`qcmd/BSM/` has 18 trajectories and `qcmd/saliva/` has nine. File prefixes1,2,3 identify independent experiments. Experiment 1 is the representative measurement; experiments2,3 are the additional measurements. Trajectory columns are `time_s`, `delta_f_Hz`, `delta_D_ppm`. Processed `recovery.csv` tables contain per-experiment recovery percentages. Saliva stage-window and stage-mean inputs support stage extraction from its trajectories.
+`qcmd/BSM/` has 18 trajectories and `qcmd/saliva/` has nine. File prefixes1,2,3 identify independent experiments. Experiment 1 is the representative measurement; experiments2,3 are the additional measurements. Trajectory columns are `time_s`, `delta_f_Hz`, `delta_D_ppm`. Recovery comparisons use the publicly supplied n/mean/sample-SD summaries. The confidential submission does not include additional processed stage or recovery tables.
 
 ## Calculation conventions
 

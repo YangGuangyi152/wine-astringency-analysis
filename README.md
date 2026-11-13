@@ -42,7 +42,7 @@ Restricted outputs are kept outside the public repository. Individual curves, ra
 
 The public six-fraction vectors reproduce direction-encoded RV coefficients, exhaustive permutation P values, BH correction and hierarchical clustering. Aggregate covariance inputs reproduce the full-curve PCA eigenstructure, centroids and confidence ellipses without publishing individual curves. Recovery ANOVA and Tukey tests are recalculated from sufficient n/mean/sample-SD summaries. Paired sensory rank tests and individual fPC scores use the confidential dataset.
 
-Recovery statistics use the processed per-experiment recovery tables. The archived six-fraction association matrix is the input used for the reported RV analysis; it is retained as its own analysis dataset. Public figure exports include only content supported by public data; individual sensory points and single-experiment QCM-D traces require confidential inputs.
+Recovery statistics use the public processed n/mean/sample-SD summaries; optional per-experiment recovery inputs are supported when supplied. The archived six-fraction association matrix is the input used for the reported RV analysis; it is retained as its own analysis dataset. Public figure exports include only content supported by public data; individual sensory points and single-experiment QCM-D traces require confidential inputs.
 
 ## Documentation
 
@@ -55,3 +55,5 @@ Recovery statistics use the processed per-experiment recovery tables. The archiv
 The individual sensory records are restricted because consent did not include public release. Full QCM-D traces are restricted because they are part of ongoing laboratory research. Anonymous verification data are supplied confidentially to editors and reviewers. The public repository does not contain these records.
 
 Licensing information is provided in `LICENSE_STATUS.md`.
+
+The confidential submission contains only the 78 sensory source records, 27 QCM-D trajectories and its README. No additional restricted reference or stage tables are required for this command.
