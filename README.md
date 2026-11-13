@@ -1,5 +1,8 @@
 # Wine tannin and astringency analyses
 
+Repository: [wine-astringency-analysis](https://github.com/YangGuangyi152/wine-astringency-analysis)  
+Analysis version: 1.0.0
+
 This repository contains the analysis code and processed source data supporting the manuscript figures, tables and reported numerical results. Individual sensory records and full QCM-D traces are provided separately for confidential editorial and peer-review verification.
 
 ## Installation
@@ -47,9 +50,8 @@ Recovery statistics use the processed per-experiment recovery tables. The archiv
 - `DATA_DICTIONARY.md` and `DATA_SCHEMA.csv`: data definitions and field inventory.
 - `VALIDATION.md`: independent numerical verification.
 - `SOFTWARE_SUBMISSION_CHECKLIST.md`: software documentation checklist.
-- `AVAILABILITY_STATEMENT_DRAFT.md`: manuscript statement draft.
 - `LICENSE_STATUS.md`: code/data licence status.
 
 The individual sensory records are restricted because consent did not include public release. Full QCM-D traces are restricted because they are part of ongoing laboratory research. Anonymous verification data are supplied confidentially to editors and reviewers. The public repository does not contain these records.
 
-No repository has been published by the local preparation workflow. Replace the unresolved repository field in the statement draft after publication and record the final version or commit. Code/data licences remain to be selected by the rights holders.
+Licensing information is provided in `LICENSE_STATUS.md`.
