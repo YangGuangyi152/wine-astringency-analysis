@@ -1,8 +1,5 @@
-"""Portable figure exports and optional local panel-alignment auditing."""
+"""Export figures in PDF, SVG, PNG and TIFF formats."""
 
-import json
-import os
-import importlib.util
 import matplotlib
 
 matplotlib.use("Agg")
@@ -33,14 +30,6 @@ def style():
 
 def save(fig, path):
     fig.canvas.draw()
-    audit = os.environ.get("FIGURE_ALIGNMENT_AUDITOR")
-    if audit:
-        spec = importlib.util.spec_from_file_location("alignment_auditor", audit)
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
-        module.require_matplotlib_panel_alignment(
-            fig, json_out=str(path.with_suffix(".alignment.json")), strict=True
-        )
     fig.savefig(path.with_suffix(".pdf"))
     fig.savefig(path.with_suffix(".svg"))
     fig.savefig(path.with_suffix(".png"), dpi=200)

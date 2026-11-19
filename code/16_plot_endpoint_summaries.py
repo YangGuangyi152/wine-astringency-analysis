@@ -17,13 +17,12 @@ def main():
         .set_index("Fraction")
         .loc[ORDER]
     )
-    fig, axes = plt.subplots(1, 3, figsize=(10.3, 3.4))
+    fig, axes = plt.subplots(1, 2, figsize=(10.3, 3.4))
     fig.subplots_adjust(left=0.075, right=0.98, bottom=0.17, top=0.96, wspace=0.4)
     for ax, (col, label) in zip(
         axes,
         [
             ("mDP", "Mean degree of polymerization"),
-            ("Extension_percent", "Extension units (%)"),
             ("PD_percent", "Prodelphinidin (%)"),
         ],
     ):

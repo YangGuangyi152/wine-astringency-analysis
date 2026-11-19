@@ -19,15 +19,25 @@ def main():
     args = arguments(__doc__)
     manifest = pd.read_csv(args.data_dir / "association_variable_manifest.csv")
     values = pd.read_csv(args.data_dir / "association_component_values.csv")
+    experimental = manifest.query("role=='experimental'")
+    sensory = manifest.query("role=='sensory'")
+    if len(experimental) != 12 or len(sensory) != 12:
+        raise ValueError("Expected 12 experimental and 12 sensory variables.")
+    if not manifest.component_column.is_unique:
+        raise ValueError("Each variable must have a unique component_column.")
+    if values.duplicated(["component_column", "component"]).any():
+        raise ValueError("Expected one value per variable and tannin fraction.")
     vectors = {}
     for col, g in values.groupby("component_column", sort=False):
         x = g.set_index("component").loc[ORDER, "value"].to_numpy(float)
+        if len(g) != 6 or not np.isfinite(x).all() or x.std(ddof=1) == 0:
+            raise ValueError(f"Invalid six-fraction input for {col}.")
         vectors[col] = ((x - x.mean()) / x.std(ddof=1))[:, None]
     permutations = np.asarray(list(itertools.permutations(range(6))), dtype=int)
     rows = []
     null_rows = []
-    for x in manifest.query("role=='experimental'").itertuples():
-        for y in manifest.query("role=='sensory'").itertuples():
+    for x in experimental.itertuples():
+        for y in sensory.itertuples():
             xv = vectors[x.component_column]
             yv = vectors[y.component_column]
             r = float(pearsonr(xv[:, 0], yv[:, 0]).statistic)
@@ -63,7 +73,7 @@ def main():
                 for i, value in enumerate(null_rv)
             )
     result = pd.DataFrame(rows)
-    result["rv_q_BH_156"] = bh_adjust(result.rv_p_exact_upper_tail)
+    result["rv_q_BH_144"] = bh_adjust(result.rv_p_exact_upper_tail)
     result.to_csv(args.output_dir / "rv_associations.csv", index=False)
     pd.DataFrame(null_rows).to_csv(
         args.output_dir / "exact_null_distributions.csv.gz",

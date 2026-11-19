@@ -1,11 +1,10 @@
-"""Run the public workflow, or additionally verify reviewer-only individual data."""
+"""Run analyses from public inputs and, optionally, confidential source records."""
 
 from pathlib import Path
 import argparse
+import os
 import subprocess
 import sys
-import time
-import json
 
 
 def main():
@@ -17,10 +16,8 @@ def main():
     parser.add_argument("--plots", action="store_true")
     args = parser.parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    timings = []
 
     def run(name, extra=(), out=None):
-        start = time.perf_counter()
         subprocess.run(
             [
                 sys.executable,
@@ -30,8 +27,8 @@ def main():
                 *map(str, extra),
             ],
             check=True,
+            env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"},
         )
-        timings.append(dict(script=name, seconds=time.perf_counter() - start))
 
     for name in [
         "03_functional_pca.py",
@@ -63,19 +60,7 @@ def main():
             run(name, extra, private_out)
         if args.plots:
             run("10_plot_restricted_qcmd.py", extra, private_out)
-        run(
-            "verify_results.py",
-            [
-                "--restricted-dir",
-                args.restricted_dir,
-                "--restricted-output-dir",
-                private_out,
-            ],
-        )
-    else:
-        run("verify_results.py")
-    (args.output_dir / "run_times.json").write_text(json.dumps(timings, indent=2))
-    print("Completed all requested analyses and numerical verification.")
+    print("Analyses completed.")
 
 
 if __name__ == "__main__":

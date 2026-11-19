@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
-from scipy.cluster.hierarchy import dendrogram
+from scipy.cluster.hierarchy import dendrogram, leaves_list
 from common import arguments, ORDER
 from plot_support import style, save, COLORS
 
@@ -134,12 +134,13 @@ def main():
         .sort_values("experimental_order")
         .experimental_label.tolist()
     )
-    sens = (
-        result[["sensory_order", "sensory_label"]]
-        .drop_duplicates()
-        .sort_values("sensory_order")
-        .sensory_label.tolist()
-    )
+    tree = pd.read_csv(args.output_dir / "cluster_linkage.csv")
+    linkage_matrix = tree[["left_node", "right_node", "distance", "n_members"]].to_numpy()
+    fingerprint = pd.read_csv(args.output_dir / "rv_fingerprints.csv", index_col=0)
+    sens = fingerprint.index[leaves_list(linkage_matrix)].tolist()
+    result["sensory_label"] = result["sensory_label"].str.split().str.join(" ")
+    result["experimental_label"] = result["experimental_label"].str.split().str.join(" ")
+    exp = [" ".join(label.split()) for label in exp]
     heat = result.pivot(
         index="experimental_label",
         columns="sensory_label",
@@ -150,7 +151,7 @@ def main():
     ax.set_xticks(range(len(sens)), sens, rotation=90)
     ax.set_yticks(range(len(exp)), exp)
     q = result.pivot(
-        index="experimental_label", columns="sensory_label", values="rv_q_BH_156"
+        index="experimental_label", columns="sensory_label", values="rv_q_BH_144"
     ).loc[exp, sens]
     for i in range(len(exp)):
         for j in range(len(sens)):
@@ -160,16 +161,15 @@ def main():
                 f"{heat.iloc[i,j]:.2f}" + ("*" if q.iloc[i, j] < 0.05 else ""),
                 ha="center",
                 va="center",
-                fontsize=6,
+                fontsize=8,
+                color="white" if abs(heat.iloc[i, j]) > 0.55 else "black",
             )
     fig.colorbar(im, ax=ax, label="sign(r) × RV", fraction=0.04, pad=0.02)
     fig.subplots_adjust(left=0.24, right=0.89, bottom=0.27, top=0.97)
     save(fig, folder / "direction_encoded_RV")
-    tree = pd.read_csv(args.output_dir / "cluster_linkage.csv")
-    fingerprint = pd.read_csv(args.output_dir / "rv_fingerprints.csv", index_col=0)
     fig, ax = plt.subplots(figsize=(9, 4.8))
     dendrogram(
-        tree[["left_node", "right_node", "distance", "n_members"]].to_numpy(),
+        linkage_matrix,
         labels=fingerprint.index.tolist(),
         ax=ax,
         leaf_rotation=90,
